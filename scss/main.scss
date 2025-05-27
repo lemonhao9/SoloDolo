@@ -1,1 +1,64 @@
 @import  'custom';
+
+// Variables globales pour les thèmes
+$theme-light: (
+  primary: #A8D5BA,
+  secondary: #A3BFFA,
+  dark: #C67878,
+  bg-dark: #F8F1E9
+);
+
+$theme-dark: (
+  primary: #63C9FF,
+  secondary: #FF8FAB,
+  dark: #FFD700,
+  bg-dark: #2C2A3F
+);
+
+// Variable pour le thème actif (par défaut : light)
+$active-theme: $theme-light;
+
+// Appliquer les styles par défaut (thème clair)
+body {
+  background-color: map-get($theme-light, bg-dark);
+  color: map-get($theme-light, dark);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary {
+  background-color: map-get($active-theme, primary);
+  border-color: map-get($active-theme, primary);
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: map-get($active-theme, secondary);
+  border-color: map-get($active-theme, secondary);
+  color: #fff;
+}
+
+// Styles pour le thème sombre (surcharge avec .theme-dark)
+.theme-dark {
+  $active-theme: $theme-dark;
+
+  body {
+    background-color: map-get($active-theme, bg-dark);
+    color: map-get($active-theme, dark);
+  }
+
+  .btn-primary {
+    background-color: map-get($active-theme, primary);
+    border-color: map-get($active-theme, primary);
+  }
+
+  .btn-secondary {
+    background-color: map-get($active-theme, secondary);
+    border-color: map-get($active-theme, secondary);
+  }
+}
+
+// Assurez-vous que les icônes et autres éléments Bootstrap s'adaptent
+.form-check-label,
+.form-check-input {
+  transition: color 0.3s;
+}
