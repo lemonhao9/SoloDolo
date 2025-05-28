@@ -1,64 +1,225 @@
-@import  'custom';
+@import 'custom';
 
-// Variables globales pour les thèmes
-$theme-light: (
-  primary: #A8D5BA,
-  secondary: #A3BFFA,
-  dark: #C67878,
-  bg-dark: #F8F1E9
-);
-
-$theme-dark: (
-  primary: #63C9FF,
-  secondary: #FF8FAB,
-  dark: #FFD700,
-  bg-dark: #2C2A3F
-);
-
-// Variable pour le thème actif (par défaut : light)
-$active-theme: $theme-light;
-
-// Appliquer les styles par défaut (thème clair)
-body {
-  background-color: map-get($theme-light, bg-dark);
-  color: map-get($theme-light, dark);
-  transition: background-color 0.3s, color 0.3s;
+html,body{
+    background-color: $black;
+    background-image: linear-gradient(to right, #2C2A3F, #3C2F5C);
+    font-size: larger;
 }
 
-.btn-primary {
-  background-color: map-get($active-theme, primary);
-  border-color: map-get($active-theme, primary);
-  color: #fff;
+.navbar {
+    background-color: $black !important;
+    background-image: linear-gradient(to right, #2C2A3F, #3C2F5C);
 }
 
-.btn-secondary {
-  background-color: map-get($active-theme, secondary);
-  border-color: map-get($active-theme, secondary);
-  color: #fff;
+.dropdown-menu{
+    background-color: $black;
 }
-
-// Styles pour le thème sombre (surcharge avec .theme-dark)
-.theme-dark {
-  $active-theme: $theme-dark;
-
-  body {
-    background-color: map-get($active-theme, bg-dark);
-    color: map-get($active-theme, dark);
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(99, 201, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
 
-  .btn-primary {
-    background-color: map-get($active-theme, primary);
-    border-color: map-get($active-theme, primary);
-  }
+#highlight {
+    background-image: $gradient-secondary; /* Utilisation de la variable */
+    -webkit-background-clip: text; /* Clip le background au text */
+    background-clip: text; /* Propriété standard pour un support plus large */
+    -webkit-text-fill-color: transparent; /* rend le texte transparent pour laisser apparaitre le style*/
+    display: inline-block; /* assure que le style est correctement appliqué */
+    text-shadow: 0 0 10px;
+    animation: glowred 1.5s ease-in-out infinite alternate;
+}
 
-  .btn-secondary {
-    background-color: map-get($active-theme, secondary);
-    border-color: map-get($active-theme, secondary);
+#piti{
+    font-size: smaller;
+    background-image: $gradient-primary; /* Utilisation de la variable */
+    -webkit-background-clip: text; /* Clip le background au text */
+    background-clip: text; /* Propriété standard pour un support plus large */
+    -webkit-text-fill-color: transparent; /* rend le texte transparent pour laisser apparaitre le style*/
+    display: inline-block; /* assure que le style est correctement appliqué */
+}
+
+#moreabout{
+    background-image: $gradient-secondary;
+}
+
+#moreabout,a{
+    text-decoration: none;
+}
+
+#pix{
+    max-width: 100px;
+}
+
+#aboutme{
+    text-shadow: 0 0 10px #63C9FF, 0 0 20px #63C9FF, 0 0 30px #63C9FF;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+#verytop{
+  border-top:  1px solid #63C9FF;
+    border-bottom: 1px  solid #63C9FF;
+    border-left: none;
+    border-right: none;
+    border-radius: 5px;
+    box-shadow: 
+    0 -5px 5px -5px #63C9FF, 
+    0 5px 5px -5px #63C9FF,
+    0 0 5px#63C9FF; /* Effet glow */
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 100%;
+}
+
+#start{
+  text-shadow: 0 0 10px #63C9FF, 0 0 20px #63C9FF, 0 0 30px #63C9FF;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+#looking{
+  font-size: smaller;
+}
+
+#tetopied{
+  max-height: 500px;
+  margin-right: 20px;
+}
+
+#goto{
+  width: 50px;
+  height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+#valaba{
+  width: 50px;
+  height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+#cotacot {
+    display: flex;
+    justify-content: center; /* Horizontally center the elements */
+    align-items: center; /* Vertically center the elements */
+    gap: 20px; /* Add spacing between the image and aside */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+#sskills{
+    border-top:  1px solid #63C9FF;
+    border-bottom: 1px  solid #63C9FF;
+    border-left: none;
+    border-right: none;
+    border-radius: 5px;
+    box-shadow: 
+    0 -5px 5px -5px #63C9FF, 
+    0 5px 5px -5px #63C9FF,
+    0 0 5px#63C9FF; /* Effet glow */
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 100%;
+    h1 {
+    color: #ffffff;
+    text-shadow: 0 0 10px #63C9FF, 0 0 20px #63C9FF, 0 0 30px #63C9FF;
+    animation: glow 1.5s ease-in-out infinite alternate;
   }
 }
 
-// Assurez-vous que les icônes et autres éléments Bootstrap s'adaptent
-.form-check-label,
-.form-check-input {
-  transition: color 0.3s;
+#skills{
+    border-top:  1px solid #63C9FF;
+    border-bottom: 1px  solid #63C9FF;
+    border-left: none;
+    border-right: none;
+    border-radius: 5px;
+    box-shadow: 
+    0 -5px 5px -5px #63C9FF, 
+    0 5px 5px -5px #63C9FF,
+    0 0 5px#63C9FF; /* Effet glow */
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 100%;
+    h1 {
+    color: #ffffff;
+    text-shadow: 0 0 10px #63C9FF, 0 0 20px #63C9FF, 0 0 30px #63C9FF;
+    animation: glow 1.5s ease-in-out infinite alternate;
+  }
+}
+
+  .carousel-img {
+    max-height: 800px;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+#interest{
+  border-top:  1px solid #63C9FF;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 5px;
+    box-shadow: 
+    0 -5px 5px -5px #63C9FF, 
+    0 5px 5px -5px #63C9FF,
+    0 0 5px#63C9FF; /* Effet glow */
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 100%;
+    h1 {
+    color: #ffffff;
+    text-shadow: 0 0 10px #63C9FF, 0 0 20px #63C9FF, 0 0 30px #63C9FF;
+    animation: glow 1.5s ease-in-out infinite alternate;
+  }
+  h2 {
+  color: #FF8FAB; /* Couleur de secours pour les navigateurs ne supportant pas background-clip */
+  background-image: $gradient-secondary;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  padding-bottom: 5px;
+  margin: 0 auto;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25%;
+    height: 2px;
+    background-image: $gradient-secondary;
+  }
+  
+  /* Style de secours pour les navigateurs ne supportant pas background-clip */
+  @supports not (-webkit-background-clip: text) {
+    color: #FF8FAB; /* Couleur de secours */
+    text-decoration: underline; /* Soulignement de secours */
+    &::after {
+      background: #FF8FAB; /* Couleur unie de secours pour le soulignement */
+    }
+  }
+  }}
+
+
+
+
+@keyframes glowred{
+    from {
+    text-shadow: 0 0 5px #FF8FAB, 0 0 10px #FF8FAB, 0 0 15px #FF8FAB;
+  }
+  to {
+    text-shadow: 0 0 10px #FF6456, 0 0 20px #FF6456, 0 0 30px #FF6456;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #4B5EAA, 0 0 10px #4B5EAA, 0 0 15px #4B5EAA;
+  }
+  to {
+    text-shadow: 0 0 10px #63C9FF, 0 0 20px #63C9FF, 0 0 30px #63C9FF;
+  }
 }

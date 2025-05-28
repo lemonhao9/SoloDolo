@@ -1,34 +1,28 @@
-// Attendre que le DOM soit chargé
-document.addEventListener('DOMContentLoaded', () => {
-  const themeToggle = document.getElementById('themeToggle');
-  const body = document.body;
+// const html = document.getElementById("htmlPage");
+// const checkbox = document.getElementById("checkbox");
 
-  // Vérifier que themeToggle existe
-  if (!themeToggle) {
-    console.error("L'élément avec l'ID 'themeToggle' n'a pas été trouvé.");
-    return;
-  }
+// // Fonction pour appliquer le thème
+// function applyTheme(theme) {
+//     if (theme === "dark") {
+//         html.setAttribute("data-bs-theme", "dark");
+//         html.classList.add("theme-dark");
+//         checkbox.checked = true;
+//     } else {
+//         html.setAttribute("data-bs-theme", "light");
+//         html.classList.remove("theme-dark");
+//         checkbox.checked = false;
+//     }
+// }
 
-  // Charger le thème sauvegardé depuis localStorage
-  const savedTheme = localStorage.getItem('theme') || 'light';
+// // Vérifier le thème stocké au chargement de la page, avec "light" par défaut
+// document.addEventListener("DOMContentLoaded", () => {
+//     const savedTheme = localStorage.getItem("theme") || "light"; // Thème clair par défaut
+//     applyTheme(savedTheme);
+// });
 
-  // Appliquer le thème initial
-  if (savedTheme === 'dark') {
-    body.classList.add('theme-dark');
-    themeToggle.checked = true; // Mettre à jour l'état de la case à cocher
-  } else {
-    body.classList.remove('theme-dark');
-    themeToggle.checked = false;
-  }
-
-  // Gérer le basculement du thème
-  themeToggle.addEventListener('change', () => {
-    if (themeToggle.checked) {
-      body.classList.add('theme-dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      body.classList.remove('theme-dark');
-      localStorage.setItem('theme', 'light');
-    }
-  });
-});
+// // Gérer le changement de thème via la case à cocher
+// checkbox.addEventListener("change", () => {
+//     const newTheme = checkbox.checked ? "dark" : "light";
+//     applyTheme(newTheme);
+//     localStorage.setItem("theme", newTheme);
+// });
