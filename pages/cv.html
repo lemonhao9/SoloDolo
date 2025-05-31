@@ -1,136 +1,338 @@
 <section id="verytop">
-    <div class="container-fluid justify-content-center align-items-center" >
-        <h1 class="text-primary text-center justify-content"id="start"> Concepteur Developpeur D'applications</h1>
-            <p class="text-primary text-center justify-content" id="looking">Alternance de 18 mois, à raison de 3 semaines par mois en entreprise et 1 semaine à l'école</p>
-                <p class="text-primary text-center justify-content" >Début de formation prévu le 22 Septembre 2025<br>Disponnible dès maintenant pour un entretien</p>
-                <div id="cotacot">
-                    <img src="/Images/starcomoi.png" alt="moi" id="tetopied" class="pb-5">
-                        <aside>
-                            <p class="text-primary">Vous trouverez un CV plus conventionnel en cliquant <a href="/assets/CV_HAMONLéo.pdf" class="text-secondary" target="_blank"><u>ici</u></a></p>
-                            <p class="text-primary">Voir le déroulé de la formation en détail <a href="/assets/Programme FNP 2025 - CDA IA - P7.pdf" class="text-secondary" target="_blank"><u>ici</u></a></p>
-                            <a href="https://github.com/lemonhao9" target="_blank"><img src="/Images/github.png" id="goto" alt="lien vers mon github"></a>
-                            <a href="https://www.linkedin.com/in/l%C3%A9o-hamon-07595b1a9/" target="_blank"><img src="/Images/linkedin.png" id="valaba" alt="lien vers mon linkedin"></a>
-                        </aside>
+  <div class="container-fluid justify-content-center align-items-center mt-5">
+    <h1 class="text-primary text-center justify-content" id="start"> Dévelopeur Web/Web mobile Full Stack</h1>
+    <!-- <p class="text-primary text-center justify-content" id="looking">Alternance de 18 mois, à raison de 3 semaines par
+      mois en entreprise et 1 semaine à l'école<br>Début de formation prévu le 22 Septembre 2025 </p> -->
+    <p class="text-primary text-center justify-content">Disponnible dès
+      maintenant pour un entretien</p>
+    <div id="cotacot">
+      <img src="/Images/starcomoi.png" alt="moi" id="tetopied" class="pb-5">
+      <aside>
+
+        <div class="text-primary">
+          <p>Née le 09/07/1997 27 ans</p>
+          <p>à Pau</p>
+          <p>Tel:06.86.61.84.67</p>
+        </div>
+        <p class="text-primary">Vous trouverez un CV plus conventionnel en cliquant <a href="/assets/CV_HAMONLéo.pdf"
+            class="text-secondary" target="_blank"><u>ici</u></a></p>
+        <!-- <p class="text-primary">Voir le déroulé de la formation en détail <a
+            href="/assets/Programme FNP 2025 - CDA IA - P7.pdf" class="text-secondary" target="_blank"><u>ici</u></a>
+        </p> -->
+        <a href="https://github.com/lemonhao9" target="_blank"><img src="/Images/github.png" id="goto"
+            alt="lien vers mon github"></a>
+        <a href="https://www.linkedin.com/in/l%C3%A9o-hamon-07595b1a9/" target="_blank"><img src="/Images/linkedin.png"
+            id="valaba" alt="lien vers mon linkedin"></a>
+        <div class="mt-3">
+          <!-- Bouton pour ouvrir la modale -->
+          <button type="button" class="btn text-white" id="mailmodal" data-bs-toggle="modal"
+            data-bs-target="#contactModal">
+            Me contacter par Mail
+          </button>
+
+          <!-- Modale Bootstrap -->
+          <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title text-primary" id="contactModalLabel">Formulaire de Contact</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <div class="modal-body">
+                  <div id="form-messages"></div>
+                  <form id="contactForm" action="send_email.php" method="POST">
+                    <div class="mb-3">
+                      <label for="email" class="form-label text-primary">Email</label>
+                      <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+                        required>
+                      <div id="emailHelp" class="form-text text-primary">
+                        <p class="fs-6 fw-light fst-italic">Je ne partagerai jamais vos données à qui que ce soit.</p>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="subject" class="form-label text-primary">Sujet</label>
+                      <input type="text" class="form-control" id="subject" name="subject" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="message" class="form-label text-primary">Message</label>
+                      <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn text-white" id="sendbtn">Envoyer</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
     </div>
+  </div>
 </section>
 
 
-<section id="skills" class="mw-100">
-    <div class="container-fluid justify-content-center align-items-center">
-        <h1 class="text-primary text-center justify-content">Hard Skills</h1>
-            <div class="justify-content-center align-items-center  d-flex flex-wrap">
-                <img src="/Images/html.png" alt="HTML" id="pix" class="img-fluid w-25 m-1">
-                <img src="/Images/css.png" alt="CSS" id="pix" class="img-fluid w-25 m-1">
-                <img src="/Images/js.png" alt="JavaScript" id="pix" class="img-fluid w-25 m-1"> 
-                <img src="/Images/php.png" alt="PHP" id="pix" class="img-fluid w-25 m-1">
-                <img src="/Images/MySQL.png" alt="MySQL" id="pix" class="img-fluid w-25 m-1">
-                <img src="/Images/Mongodb.png" alt="MongoDB" id="pix" class="img-fluid w-25 m-1"> 
-                <img src="/Images/bootstrap.png" alt="Bootstrap" id="pix" class="img-fluid w-25 m-1">
-                <img src="/Images/react.png" alt="React" id="pix" class="img-fluid w-25 m-1">
-                <img src="/Images/symfony.png" alt="Symfony" id="pix" class="img-fluid w-25 m-1">
-                <img src="/Images/github.png" alt="docker" id="pix" class="img-fluid w-25 m-1">
-                <img src="/Images/git.png" alt="docker" id="pix" class="img-fluid w-25 m-1">
-                <img src="/Images/figma.png" alt="Figma" id="pix" class="img-fluid w-25 m-1">
-                <img src="/Images/wordpress.png" alt="WordPress" id="pix" class="img-fluid w-25 m-1">
-                <img src="/Images/docker.png" alt="docker" id="pix" class="img-fluid w-25 m-1">
-            </div>
+<section>
+  <div class="container-fluid justify-content-center align-items-center" id="skills">
+    <h1 class="text-primary text-center justify-content">Hard Skills</h1>
+    <div class="gallery container-fluid justify-content-center align-items-center">
+
+      <div class="boite">
+        <div class="image-wrapper">
+          <img src="/Images/html.png" alt="HTML" class="pix img-fluid w-50 m-2">
+        </div>
+        <div class="tex">
+          <p class="text-dark">
+            Bonne maîtrise et solides acquis.
+          </p>
+        </div>
+      </div>
+      <div class="boite">
+        <div class="image-wrapper">
+          <img src="/Images/css.png" alt="CSS" class="pix img-fluid w-50 m-2">
+        </div>
+        <div class="tex">
+          <p class="text-dark">
+            Bonne maîtrise et solides acquis.
+          </p>
+        </div>
+      </div>
+
+      <div class="boite">
+        <div class="image-wrapper">
+          <img src="/Images/js.png" alt="JavaScript" class="pix img-fluid w-50 m-2">
+        </div>
+        <div class="tex">
+          <p class="text-dark">
+            Bonne maîtrise et solides acquis, POO, asynchrones ...
+          </p>
+        </div>
+      </div>
+
+      <div class="boite">
+        <div class="image-wrapper">
+          <img src="/Images/php.png" alt="PHP" class="pix img-fluid w-50 m-2">
+        </div>
+        <div class="tex">
+          <p class="text-dark">
+            Très bonnes bases, maîtrise partielle.
+          </p>
+        </div>
+      </div>
+
+      <div class="boite">
+        <div class="image-wrapper">
+          <img src="/Images/MySQL.png" alt="MySQL" class="pix img-fluid w-50 m-2">
+        </div>
+        <div class="tex">
+          <p class="text-dark">
+            Bonne maîtrise et solides acquis.
+          </p>
+        </div>
+      </div>
+
+      <div class="boite">
+        <div class="image-wrapper">
+          <img src="/Images/Mongodb.png" alt="MongoDB" class="pix img-fluid w-50 m-2">
+        </div>
+        <div class="tex">
+          <p class="text-dark">
+            Bonne maîtrise et solides acquis.
+          </p>
+        </div>
+      </div>
+
+      <div class="boite">
+        <div class="image-wrapper">
+          <img src="/Images/bootstrap.png" alt="Bootstrap" class="pix img-fluid w-50 m-2">
+        </div>
+        <div class="tex">
+          <p class="text-dark">
+            Bonne maitrise et solides acquis.
+          </p>
+        </div>
+      </div>
+
+      <div class="boite">
+        <div class="image-wrapper">
+          <img src="/Images/react.png" alt="React" class="pix img-fluid w-50 m-2">
+        </div>
+        <div class="tex">
+          <p class="text-dark">
+            Connaissance du Framework et de son application.
+          </p>
+        </div>
+      </div>
+
+      <div class="boite">
+        <div class="image-wrapper">
+          <img src="/Images/symfony.png" alt="Symfony" class="pix img-fluid w-50 m-2">
+        </div>
+        <div class="tex">
+          <p class="text-dark">
+            Connaissance du Framework et de la méthode MVC.
+          </p>
+        </div>
+      </div>
+
+      <div class="boite">
+        <div class="image-wrapper">
+          <img src="/Images/github.png" alt="github" class="pix img-fluid w-50 m-2">
+        </div>
+        <div class="tex">
+          <p class="text-dark">
+            Le béaba, pratique et simple, bonne maîtrise et connaissance.
+          </p>
+        </div>
+      </div>
+
+      <div class="boite">
+        <div class="image-wrapper">
+          <img src="/Images/git.png" alt="Git" class="pix img-fluid w-50 m-2">
+        </div>
+        <div class="tex">
+          <p class="text-dark">
+            Versionnig et commandes de consoles maîtrisées.
+          </p>
+        </div>
+      </div>
+
+      <div class="boite">
+        <div class="image-wrapper">
+          <img src="/Images/figma.png" alt="Figma" class="pix img-fluid w-50 m-2">
+        </div>
+        <div class="tex">
+          <p class="text-dark">
+            Bonne maîtrise, maquetage WireFrames et MockUps, UX/UI
+          </p>
+        </div>
+      </div>
+
+      <div class="boite">
+        <div class="image-wrapper">
+          <img src="/Images/wordpress.png" alt="WordPress" id="pix" class="pix img-fluid w-50 m-2">
+        </div>
+        <div class="tex">
+          <p class="text-dark">
+            Bonne connaissance du CMS, maîtrise des différents aspects
+          </p>
+        </div>
+      </div>
+
+      <div class="boite">
+        <div class="image-wrapper">
+          <img src="/Images/docker.png" alt="docker" class="pix img-fluid w-50 m-2">
+        </div>
+        <div class="tex">
+          <p class="text-dark">
+            Connaissance des Microservices, fonctionnement connu mais pas appliqué.
+          </p>
+        </div>
+      </div>
+
     </div>
+  </div>
 </section>
 
 <section id="sskills">
-    <div class="container-fluid justify-content-center align-items-center">
-        <h1 class="text-primary text-center justify-content">Soft Skills</h1>
-        <ul class="justify-content-center align-items-center  d-flex flex-wrap text-primary">
-            <li class="ms-3 me-3">Autodidacte</li>
-            <li class="ms-3 me-3">Communication</li>
-            <li class="ms-3 me-3">Curiosité & Créativité</li>
-            <li class="ms-3 me-3">Adaptabilité</li>
-            <li class="ms-3 me-3">Travail d'équipe</li>
-        </ul>
-    </div>
+  <div class="container-fluid justify-content-center align-items-center">
+    <h1 class="text-primary text-center justify-content">Soft Skills</h1>
+    <ul class="justify-content-center align-items-center  d-flex flex-wrap text-primary">
+      <li class="ms-3 me-3">Autodidacte</li>
+      <li class="ms-3 me-3">Communication</li>
+      <li class="ms-3 me-3">Curiosité & Créativité</li>
+      <li class="ms-3 me-3">Adaptabilité</li>
+      <li class="ms-3 me-3">Travail d'équipe</li>
+    </ul>
+  </div>
 </section>
 
 <section>
-    <div id="interest">
-        <h1 class="text-center text-primary pt-3">Centres d'intérêts</h1>
-            
-            <h2 class="text-center text-secondary pt-3 pb-3"><u>Art</u></h2>
-                
-                <p class="text-center text-primary pt-3">Peinture, Dessin, Danses, Musique</p>
+  <div id="interest">
+    <h1 class="text-center text-primary pt-3">Centres d'intérêts</h1>
 
-            <h2 class="text-center pt-3 pb-3">Technologies</h2>
-            
-                <p class="text-center text-primary pt-3">Informatique, Machines, Jeux vidéos</p>
+    <h2 class="text-center text-secondary pt-3 pb-3"><u>Art</u></h2>
 
-            <h2 class="text-center pt-3 pb-3">Voyages</h2>
-                
-            <div id="carouselExampleCaptions" class="carousel slide  pt-3">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <p class="text-center text-primary pt-3">Peinture, Dessin, Danses, Musique</p>
+
+    <h2 class="text-center pt-3 pb-3">Technologies</h2>
+
+    <p class="text-center text-primary pt-3">Informatique, Machines, Jeux vidéos</p>
+
+    <h2 class="text-center pt-3 pb-3">Voyages</h2>
+
+    <div id="carouselExampleCaptions" class="carousel slide  pt-3">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+          aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+          aria-label="Slide 5"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/Images/voyages/BXL.JPG" class="d-block w-100 carousel-img" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Belgique Bruxelles</h5>
+            <p>Non loin de l'Atomium.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/Images/voyages/Rot.JPG" class="d-block w-100 carousel-img" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Pays-Bas Rotterdam</h5>
+            <p>Pont Érasme et la statue du Marathon de ROT.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/Images/voyages/BER.JPG" class="d-block w-100 carousel-img" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Allemagne Berlin</h5>
+            <p>Station de métro à EastSide Gallery.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/Images/voyages/ENG.JPG" class="d-block w-100 carousel-img" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Angleterre Londres</h5>
+            <p>Dans le quartier de CamdenTown.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/Images/voyages/DUB.JPG" class="d-block w-100 carousel-img" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Irlande Dublin</h5>
+            <p>Chateau de Dublin et son jardin.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <h2 class="text-center pt-3 pb-3">Nature</h2>
+
+    <p class="text-center text-primary pt-3">Camping, Bivouac, Randonnées, Animaux</p>
+
+    <h2 class="text-center pt-3 pb-3">Cuisine</h2>
+
+    <p class="text-center text-primary pt-3">Cuisiner, nourritures du monde et traditionnelles</p>
+
+    <h2 class="text-center pt-3 pb-3">Sport</h2>
+
+    <p class="text-center text-primary pb-5 pt-3">Breakdance, Course, Vélo, Kayak, Salle de sport/musculation</p>
+
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="/Images/voyages/BXL.JPG" class="d-block w-100 carousel-img" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Belgique.Bruxelles</h5>
-        <p>Non loin de l'Atomium.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="/Images/voyages/Rot.JPG" class="d-block w-100 carousel-img" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Pays-Bas.Rotterdam</h5>
-        <p>Pont Érasme et la statue du Marathon de ROT.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="/Images/voyages/BER.JPG" class="d-block w-100 carousel-img" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Allemagne.Berlin</h5>
-        <p>Station de métro à EastSide Gallery.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="/Images/voyages/ENG.JPG" class="d-block w-100 carousel-img" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Angleterre.Londres</h5>
-        <p>Dans le quartier de CamdenTown.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="/Images/voyages/DUB.JPG" class="d-block w-100 carousel-img" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Irlande.Dublin</h5>
-        <p>Chateau de Dublin et son jardin.</p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-            
-            <h2 class="text-center pt-3 pb-3">Nature</h2>
-            
-                <p class="text-center text-primary pt-3">Camping, Bivouac, Randonnées, Animaux</p>
-
-            <h2 class="text-center pt-3 pb-3">Cuisine</h2>
-            
-                <p class="text-center text-primary pt-3">Cuisiner, nourritures du monde et traditionnelles</p>
-
-            <h2 class="text-center pt-3 pb-3">Sport</h2>
-        
-                <p class="text-center text-primary pb-5 pt-3">Breakdance, Course, Vélo, Kayak, Salle de sport/musculation</p>
-
-    </div>
 </section>
