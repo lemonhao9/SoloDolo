@@ -1,54 +1,68 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
+use Dotenv\Dotenv;
 
+// Enable error logging instead of displaying errors
+ini_set('display_errors', 0);
+ini_set('log_errors', 1);
+ini_set('error_log', __DIR__ . '/php-error.log');
+
+// Require dependencies
 require_once 'vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+// Load environment variables
+$dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
+// Set the correct Content-Type header for JSON
 header('Content-Type: application/json; charset=UTF-8');
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+// Initialize response array
+$response = ["status" => "error", "message" => "Une erreur est survenue."];
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Sanitize and validate input
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
     $email = filter_var($email, FILTER_VALIDATE_EMAIL);
-    $subject = htmlspecialchars(strip_tags($_POST['subject']));
-    $message = htmlspecialchars(strip_tags($_POST['message']));
+    $subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $message = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-    if (!empty($email) && !empty($subject) && !empty($message)) {
-        $mail = new PHPMailer(true);
+    if ($email && $subject && $message) {
         try {
-            // Configuration du serveur SMTP
+            $mail = new PHPMailer(true);
+            // SMTP Configuration
             $mail->isSMTP();
-            $mail->Host = 'smtp.gmail.com'; // Par exemple, pour Gmail
+            $mail->Host = $_ENV['SMTP_HOST'];
             $mail->SMTPAuth = true;
-            $mail->Username = $_ENV['SMTP_USERNAME'];//variable stockée dans le .env pour + sécurité
-            $mail->Password = $_ENV['SMTP_PASSWORD']; //variable stockée dans le .env pour + sécurité
+            $mail->Username = $_ENV['SMTP_USERNAME'];
+            $mail->Password = $_ENV['SMTP_PASSWORD'];
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port = 587;
+            $mail->Port = (int)$_ENV['SMTP_PORT'];
 
-            // Destinataire
+            // Email details
             $mail->setFrom($email);
-            $mail->addAddress('leohamon9@gmail.com');
+            $mail->addAddress($_ENV['SMTP_USERNAME']);
             $mail->addReplyTo($email);
 
-            // Contenu de l'e-mail
+            // Content
             $mail->isHTML(false);
             $mail->Subject = $subject;
             $mail->Body = "Nouveau message de : $email\n\nSujet : $subject\n\nMessage :\n$message";
 
-            // Envoyer
+            // Envoie de l'email
             $mail->send();
-            echo json_encode(["status" => "success", "message" => "E-mail envoyé avec succès !"]);
+            $response = ["status" => "success", "message" => "E-mail envoyé avec succès !"];
         } catch (Exception $e) {
-            echo json_encode(["status" => "error", "message" => "Erreur : {$mail->ErrorInfo}"]);
+            $response = ["status" => "error", "message" => "Erreur : {$mail->ErrorInfo}"];
         }
     } else {
-        echo json_encode(["status" => "error", "message" => "Tous les champs sont obligatoires."]);
+        $response = ["status" => "error", "message" => "Tous les champs sont obligatoires."];
     }
 } else {
-    echo json_encode(["status" => "error", "message" => "Méthode non autorisée."]);
+    $response = ["status" => "error", "message" => "Méthode non autorisée."];
 }
-header ("Location: /cv");
+
+// Output the JSON response and exit immediately
+echo json_encode($response, JSON_UNESCAPED_UNICODE);
 exit;

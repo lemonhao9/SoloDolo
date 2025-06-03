@@ -32,11 +32,18 @@ const LoadContentPage = async () => {
     const scriptTag = document.createElement("script");
     scriptTag.setAttribute("type", "text/javascript");
     scriptTag.setAttribute("src", actualRoute.pathJS);
+    scriptTag.onload = () => {
+      if (typeof window.initializeMail === "function") {
+        window.initializeMail(); // Call initialization after script loads
+      }
+    };
     document.querySelector("body").appendChild(scriptTag);
+  } else if (typeof window.initializeMail === "function") {
+    window.initializeMail(); // Call if script is already loaded
   }
 
   // Changement du titre de la page
-  document.title = actualRoute.title + " - " + (websiteName);
+  document.title = actualRoute.title + " - " + websiteName;
 
   // Afficher et masquer éléments en fonction du rôle (à implémenter)
   if (typeof showAndHideElementsForRoles === "function") {

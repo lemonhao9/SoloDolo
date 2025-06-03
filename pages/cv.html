@@ -29,8 +29,6 @@
             data-bs-target="#contactModal">
             Me contacter par Mail
           </button>
-
-          <!-- Modale Bootstrap -->
           <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel"
             aria-hidden="true">
             <div class="modal-dialog">
@@ -41,13 +39,19 @@
                 </div>
                 <div class="modal-body">
                   <div id="form-messages"></div>
-                  <form id="contactForm" action="send_mail.php" method="POST">
+                  <form id="contactForm" action="/send_mail.php" method="POST">
                     <div class="mb-3">
                       <label for="email" class="form-label text-primary">Email</label>
-                      <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
-                        required>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="exemple@mail.fr"
+                        aria-describedby="emailHelp" required>
+                      <div class="invalid-feedback">
+                        Veuillez entrer un email valide
+                      </div>
+                      <div class="valid-feedback">
+                        Format d'email valide
+                      </div>
                       <div id="emailHelp" class="form-text text-primary">
-                        <p class="fs-6 fw-light fst-italic">Je ne partagerai jamais vos données à qui que ce soit.</p>
+                        Je ne partagerai jamais vos données à qui que ce soit.
                       </div>
                     </div>
                     <div class="mb-3">
@@ -69,6 +73,7 @@
     </div>
   </div>
 </section>
+
 
 
 <section>
@@ -336,3 +341,5 @@
 
   </div>
 </section>
+
+<script src="/js/mail.js"></script>
