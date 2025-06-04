@@ -11987,9 +11987,30 @@ html, body {
   position: fixed;
   width: 100%;
   height: 60px;
-  background-color: #2C2A3F !important;
   background-image: linear-gradient(to right, #2C2A3F, #3C2F5C);
   transition: 0.5s;
+}
+
+.navbar-brand {
+  color: #ffffff;
+  text-shadow: 0 0 30px #63C9FF, 0 0 30px #63C9FF, 0 0 30px #63C9FF;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+#navbarNavDropdown {
+  background-image: linear-gradient(to right, #2C2A3F, #3C2F5C);
+  opacity: 75%;
+}
+
+.bigtitle {
+  font-weight: bold;
+  text-shadow: 0 0 30px #63C9FF, 0 0 30px #63C9FF, 0 0 30px #63C9FF;
+  animation: glow 1.3s ease-in-out infinite alternate;
+}
+
+.look {
+  -webkit-text-decoration: underline 0.8px;
+          text-decoration: underline 0.8px;
 }
 
 a u {
@@ -12030,22 +12051,26 @@ a u:visited {
 }
 
 #highlight {
-  background-image: linear-gradient(to right, #FF8FAB, #FF6456); /* Utilisation de la variable */
-  -webkit-background-clip: text; /* Clip le background au text */
-  background-clip: text; /* Propriété standard pour un support plus large */
-  -webkit-text-fill-color: transparent; /* rend le texte transparent pour laisser apparaitre le style*/
-  display: inline-block; /* assure que le style est correctement appliqué */
+  background-image: linear-gradient(to right, #FF8FAB, #FF6456);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
   text-shadow: 0 0 10px;
   animation: glowred 1.5s ease-in-out infinite alternate;
 }
 
+#moihome {
+  max-width: 20vw;
+}
+
 .piti {
   font-size: smaller;
-  background-image: linear-gradient(to right, #63C9FF, #4B5EAA); /* Utilisation de la variable */
-  -webkit-background-clip: text; /* Clip le background au text */
-  background-clip: text; /* Propriété standard pour un support plus large */
-  -webkit-text-fill-color: transparent; /* rend le texte transparent pour laisser apparaitre le style*/
-  display: inline-block; /* assure que le style est correctement appliqué */
+  background-image: linear-gradient(to right, #63C9FF, #4B5EAA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 a {
@@ -12053,7 +12078,7 @@ a {
 }
 
 .pix {
-  max-width: 100px;
+  max-width: 20vw;
 }
 
 #aboutme {
@@ -12067,7 +12092,7 @@ a {
   border-left: none;
   border-right: none;
   border-radius: 5px;
-  box-shadow: 0 -5px 5px -5px #63C9FF, 0 5px 5px -5px #63C9FF, 0 0 5px #63C9FF; /* Effet glow */
+  box-shadow: 0 -5px 5px -5px #63C9FF, 0 5px 5px -5px #63C9FF, 0 0 5px #63C9FF;
   padding-top: 1em;
   padding-bottom: 1em;
   width: 100%;
@@ -12103,10 +12128,10 @@ a {
 
 #cotacot {
   display: flex;
-  justify-content: center; /* Horizontally center the elements */
-  align-items: center; /* Vertically center the elements */
-  gap: 20px; /* Add spacing between the image and aside */
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .modal-content {

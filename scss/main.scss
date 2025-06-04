@@ -16,10 +16,33 @@ html,body{
   position: fixed;
   width: 100%;
   height: 60px;
-  background-color: $black !important;
   background-image: linear-gradient(to right, #2C2A3F, #3C2F5C);
   transition: 0.5s;
   }
+
+.navbar-brand{
+  color: #ffffff;
+  text-shadow: 0 0 30px #63C9FF, 0 0 30px #63C9FF, 0 0 30px #63C9FF;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+#navbarNavDropdown{
+  background-image: linear-gradient(to right, #2C2A3F, #3C2F5C);
+  opacity: 75%;
+}
+
+
+
+.bigtitle{
+  font-weight: bold;
+  text-shadow: 0 0 30px #63C9FF, 0 0 30px #63C9FF, 0 0 30px #63C9FF;
+  animation: glow 1.3s ease-in-out infinite alternate;
+}
+
+.look{
+  
+  text-decoration: underline 0.8px;
+}
 
 a u{
   color: #ffffff;
@@ -58,22 +81,26 @@ color: $dark;
   }
 
 #highlight {
-    background-image: $gradient-secondary; /* Utilisation de la variable */
-    -webkit-background-clip: text; /* Clip le background au text */
-    background-clip: text; /* Propriété standard pour un support plus large */
-    -webkit-text-fill-color: transparent; /* rend le texte transparent pour laisser apparaitre le style*/
-    display: inline-block; /* assure que le style est correctement appliqué */
+    background-image: $gradient-secondary;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
     text-shadow: 0 0 10px;
     animation: glowred 1.5s ease-in-out infinite alternate;
 }
 
+#moihome{
+  max-width: 20vw;
+}
+
 .piti{
     font-size: smaller;
-    background-image: $gradient-primary; /* Utilisation de la variable */
-    -webkit-background-clip: text; /* Clip le background au text */
-    background-clip: text; /* Propriété standard pour un support plus large */
-    -webkit-text-fill-color: transparent; /* rend le texte transparent pour laisser apparaitre le style*/
-    display: inline-block; /* assure que le style est correctement appliqué */
+    background-image: $gradient-primary;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
 
 a{
@@ -81,7 +108,7 @@ a{
 }
 
 .pix{
-    max-width: 100px;
+    max-width: 20vw;
 }
 
 #aboutme{
@@ -98,7 +125,7 @@ a{
     box-shadow: 
     0 -5px 5px -5px #63C9FF, 
     0 5px 5px -5px #63C9FF,
-    0 0 5px#63C9FF; /* Effet glow */
+    0 0 5px#63C9FF;
     padding-top: 1em;
     padding-bottom: 1em;
     width: 100%;
@@ -134,10 +161,10 @@ a{
 
 #cotacot {
     display: flex;
-    justify-content: center; /* Horizontally center the elements */
-    align-items: center; /* Vertically center the elements */
-    gap: 20px; /* Add spacing between the image and aside */
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .modal-content{
@@ -408,3 +435,94 @@ background-image: $gradient-primary;
     }
 
     /* ----------------------------------------------- */
+
+//     @media (max-width: 768px) {
+//     html, body {
+//         font-size: medium; /* Réduire la taille de police */
+//     }
+
+//     .navbar {
+//         height: 50px; /* Réduire la hauteur de la navbar */
+//     }
+
+//     .glowlink, .dropdown-item, #aboutme, #start, #exampleModalLabel, #contactModalLabel {
+//         text-shadow: 0 0 5px #63C9FF; /* Réduire l'effet de glow pour performance */
+//     }
+
+//     .gallery {
+//         max-width: 90vw; /* Ajuster pour mobile */
+//         gap: 10px; /* Réduire l'espacement */
+//     }
+
+//     .boite {
+//         width: 45vw; /* Ajuster la taille des boîtes */
+//         height: auto;
+//     }
+
+//     .image-wrapper {
+//         height: 30vw; /* Ajuster la hauteur des images */
+//     }
+
+//     #looking {
+//         font-size: x-small; /* Ajuster la taille de police */
+//     }
+
+//     #cotacot {
+//         gap: 10px; /* Réduire l'espacement pour mobile */
+//     }
+// }
+
+// @media (max-width: 480px) {
+//     html, body {
+//         font-size: small; /* Encore plus petit pour les petits écrans */
+//     }
+
+//     .pix {
+//         max-width: 30vw; /* Ajuster pour très petits écrans */
+//     }
+
+//     .boite {
+//         width: 80vw; /* Une boîte par ligne sur petits écrans */
+//     }
+
+//     .navbar {
+//         height: 40px; /* Encore plus compact */
+//     }
+
+//     .lettre {
+//         font-size: 40px; /* Réduire la taille du loader */
+//         letter-spacing: 5px;
+//     }
+// }
+
+// .carousel-img {
+//     max-height: 60vh; /* Remplace 800px */
+//     max-width: 100%;
+//     object-fit: contain;
+// }
+
+
+// #cotacot {
+//     flex-direction: column; /* Passer en colonne sur petits écrans */
+//     align-items: center;
+//     gap: 10px;
+// }
+
+// @media (min-width: 769px) {
+//     #cotacot {
+//         flex-direction: row; /* Garder en ligne pour grands écrans */
+//     }
+// }
+
+// /* 5. Simplifier les animations pour mobile */
+// @media (max-width: 768px) {
+//     @keyframes glow {
+//         from { text-shadow: 0 0 5px #4B5EAA; }
+//         to { text-shadow: 0 0 10px #63C9FF; }
+//     }
+
+//     @keyframes glowred {
+//         from { text-shadow: 0 0 5px #FF8FAB; }
+//         to { text-shadow: 0 0 10px #FF6456; }
+//     }
+// }
