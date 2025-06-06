@@ -12283,7 +12283,7 @@ a {
 }
 
 .boite:hover .tex {
-  max-height: 1000px; /* Ajuste en fonction du contenu */
+  max-height: 1500px; /* Ajuste en fonction du contenu */
   max-width: none;
   padding: 10px;
 }
