@@ -4915,8 +4915,8 @@ textarea.form-control-lg {
   --bs-progress-bg: var(--bs-secondary-bg);
   --bs-progress-border-radius: var(--bs-border-radius);
   --bs-progress-box-shadow: var(--bs-box-shadow-inset);
-  --bs-progress-bar-color: #fff;
-  --bs-progress-bar-bg: #63C9FF;
+  --bs-progress-bar-color: black;
+  --bs-progress-bar-bg: #FF8FAB;
   --bs-progress-bar-transition: width 0.6s ease;
   display: flex;
   height: var(--bs-progress-height);
@@ -12272,11 +12272,15 @@ a {
 }
 .boite {
   width: 300px;
-  height: 300px; /* Image (200px) + texte max (80px) */
+  height: 300px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
+}
+
+.progress {
+  width: 100px;
 }
 
 .image-wrapper {
@@ -12308,7 +12312,7 @@ a {
 }
 
 .boite:hover .tex {
-  max-height: 1000px; /* Ajuste en fonction du contenu */
+  max-height: 1000px;
   max-width: none;
   padding: 10px;
 }

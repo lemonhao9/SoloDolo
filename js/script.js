@@ -22,4 +22,4 @@ window.addEventListener("scroll", () =>{
         navbar.style.top = 0;
     }
     lastScrollValue = window.scrollY
-});
+});// elle s'enlève en défillant vers le bas et re-apparait en remontant

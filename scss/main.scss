@@ -316,11 +316,15 @@ background-image: $gradient-primary;
 }
 .boite {
     width: 300px;
-      height: 300px; /* Image (200px) + texte max (80px) */
+      height: 300px; 
       overflow: hidden;
       display: flex;
       flex-direction: column;
       transition: all 0.3s ease;
+}
+
+.progress{
+  width: 100px;
 }
 
     .image-wrapper {
@@ -352,7 +356,7 @@ background-image: $gradient-primary;
     }
 
     .boite:hover .tex {
-      max-height: 1000px; /* Ajuste en fonction du contenu */
+      max-height: 1000px;
       max-width: none;
       padding: 10px;
     }
@@ -435,94 +439,3 @@ background-image: $gradient-primary;
     }
 
     /* ----------------------------------------------- */
-
-//     @media (max-width: 768px) {
-//     html, body {
-//         font-size: medium; /* Réduire la taille de police */
-//     }
-
-//     .navbar {
-//         height: 50px; /* Réduire la hauteur de la navbar */
-//     }
-
-//     .glowlink, .dropdown-item, #aboutme, #start, #exampleModalLabel, #contactModalLabel {
-//         text-shadow: 0 0 5px #63C9FF; /* Réduire l'effet de glow pour performance */
-//     }
-
-//     .gallery {
-//         max-width: 90vw; /* Ajuster pour mobile */
-//         gap: 10px; /* Réduire l'espacement */
-//     }
-
-//     .boite {
-//         width: 45vw; /* Ajuster la taille des boîtes */
-//         height: auto;
-//     }
-
-//     .image-wrapper {
-//         height: 30vw; /* Ajuster la hauteur des images */
-//     }
-
-//     #looking {
-//         font-size: x-small; /* Ajuster la taille de police */
-//     }
-
-//     #cotacot {
-//         gap: 10px; /* Réduire l'espacement pour mobile */
-//     }
-// }
-
-// @media (max-width: 480px) {
-//     html, body {
-//         font-size: small; /* Encore plus petit pour les petits écrans */
-//     }
-
-//     .pix {
-//         max-width: 30vw; /* Ajuster pour très petits écrans */
-//     }
-
-//     .boite {
-//         width: 80vw; /* Une boîte par ligne sur petits écrans */
-//     }
-
-//     .navbar {
-//         height: 40px; /* Encore plus compact */
-//     }
-
-//     .lettre {
-//         font-size: 40px; /* Réduire la taille du loader */
-//         letter-spacing: 5px;
-//     }
-// }
-
-// .carousel-img {
-//     max-height: 60vh; /* Remplace 800px */
-//     max-width: 100%;
-//     object-fit: contain;
-// }
-
-
-// #cotacot {
-//     flex-direction: column; /* Passer en colonne sur petits écrans */
-//     align-items: center;
-//     gap: 10px;
-// }
-
-// @media (min-width: 769px) {
-//     #cotacot {
-//         flex-direction: row; /* Garder en ligne pour grands écrans */
-//     }
-// }
-
-// /* 5. Simplifier les animations pour mobile */
-// @media (max-width: 768px) {
-//     @keyframes glow {
-//         from { text-shadow: 0 0 5px #4B5EAA; }
-//         to { text-shadow: 0 0 10px #63C9FF; }
-//     }
-
-//     @keyframes glowred {
-//         from { text-shadow: 0 0 5px #FF8FAB; }
-//         to { text-shadow: 0 0 10px #FF6456; }
-//     }
-// }

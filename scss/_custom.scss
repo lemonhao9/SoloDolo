@@ -7,5 +7,7 @@ $gradient-primary: linear-gradient(to right,#63C9FF, #4B5EAA);
 $gradient-secondary: linear-gradient(to right,#FF8FAB, #FF6456);
 $font-family-sans-serif:"Inter", sans-serif !default;
 $font-family-serif:"Merriweather", serif !default;
+$progress-bar-color: black;
+$progress-bar-bg: #FF8FAB;
 
 @import "../node_modules/bootstrap/scss/bootstrap";
