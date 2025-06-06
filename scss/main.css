@@ -36,7 +36,7 @@
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
-  --bs-dark: #d1c060;
+  --bs-dark: #ffda05;
   --bs-primary-rgb: 99, 201, 255;
   --bs-secondary-rgb: 255, 143, 171;
   --bs-success-rgb: 25, 135, 84;
@@ -44,7 +44,7 @@
   --bs-warning-rgb: 255, 193, 7;
   --bs-danger-rgb: 220, 53, 69;
   --bs-light-rgb: 248, 249, 250;
-  --bs-dark-rgb: 209, 192, 96;
+  --bs-dark-rgb: 255, 218, 5;
   --bs-primary-text-emphasis: #285066;
   --bs-secondary-text-emphasis: #663944;
   --bs-success-text-emphasis: #0a3622;
@@ -2030,13 +2030,13 @@ progress {
 
 .table-dark {
   --bs-table-color: #2C2A3F;
-  --bs-table-bg: #d1c060;
-  --bs-table-border-color: #b0a259;
-  --bs-table-striped-bg: #c9b95e;
+  --bs-table-bg: #ffda05;
+  --bs-table-border-color: #d5b711;
+  --bs-table-striped-bg: #f4d108;
   --bs-table-striped-color: #2C2A3F;
-  --bs-table-active-bg: #c1b15d;
+  --bs-table-active-bg: #eac80b;
   --bs-table-active-color: #2C2A3F;
-  --bs-table-hover-bg: #c5b55e;
+  --bs-table-hover-bg: #efcd09;
   --bs-table-hover-color: #2C2A3F;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
@@ -3127,19 +3127,19 @@ textarea.form-control-lg {
 
 .btn-dark {
   --bs-btn-color: #2C2A3F;
-  --bs-btn-bg: #d1c060;
-  --bs-btn-border-color: #d1c060;
+  --bs-btn-bg: #ffda05;
+  --bs-btn-border-color: #ffda05;
   --bs-btn-hover-color: #2C2A3F;
-  --bs-btn-hover-bg: #d8c978;
-  --bs-btn-hover-border-color: #d6c670;
-  --bs-btn-focus-shadow-rgb: 184, 170, 91;
+  --bs-btn-hover-bg: #ffe02b;
+  --bs-btn-hover-border-color: #ffde1e;
+  --bs-btn-focus-shadow-rgb: 223, 192, 14;
   --bs-btn-active-color: #2C2A3F;
-  --bs-btn-active-bg: #dacd80;
-  --bs-btn-active-border-color: #d6c670;
+  --bs-btn-active-bg: #ffe137;
+  --bs-btn-active-border-color: #ffde1e;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(44, 42, 63, 0.125);
   --bs-btn-disabled-color: #2C2A3F;
-  --bs-btn-disabled-bg: #d1c060;
-  --bs-btn-disabled-border-color: #d1c060;
+  --bs-btn-disabled-bg: #ffda05;
+  --bs-btn-disabled-border-color: #ffda05;
 }
 
 .btn-outline-primary {
@@ -3262,19 +3262,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-dark {
-  --bs-btn-color: #d1c060;
-  --bs-btn-border-color: #d1c060;
+  --bs-btn-color: #ffda05;
+  --bs-btn-border-color: #ffda05;
   --bs-btn-hover-color: #2C2A3F;
-  --bs-btn-hover-bg: #d1c060;
-  --bs-btn-hover-border-color: #d1c060;
-  --bs-btn-focus-shadow-rgb: 209, 192, 96;
+  --bs-btn-hover-bg: #ffda05;
+  --bs-btn-hover-border-color: #ffda05;
+  --bs-btn-focus-shadow-rgb: 255, 218, 5;
   --bs-btn-active-color: #2C2A3F;
-  --bs-btn-active-bg: #d1c060;
-  --bs-btn-active-border-color: #d1c060;
+  --bs-btn-active-bg: #ffda05;
+  --bs-btn-active-border-color: #ffda05;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(44, 42, 63, 0.125);
-  --bs-btn-disabled-color: #d1c060;
+  --bs-btn-disabled-color: #ffda05;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #d1c060;
+  --bs-btn-disabled-border-color: #ffda05;
   --bs-gradient: none;
 }
 
@@ -4916,7 +4916,7 @@ textarea.form-control-lg {
   --bs-progress-border-radius: var(--bs-border-radius);
   --bs-progress-box-shadow: var(--bs-box-shadow-inset);
   --bs-progress-bar-color: #fff;
-  --bs-progress-bar-bg: #63C9FF;
+  --bs-progress-bar-bg: #FF8FAB;
   --bs-progress-bar-transition: width 0.6s ease;
   display: flex;
   height: var(--bs-progress-height);
@@ -6908,8 +6908,8 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(var(--bs-dark-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-dark:hover, .link-dark:focus {
-  color: RGBA(218, 205, 128, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(218, 205, 128, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(255, 225, 55, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(255, 225, 55, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-body-emphasis {
@@ -12005,7 +12005,7 @@ a u:hover {
 }
 
 a u:visited {
-  color: #d1c060;
+  color: #ffda05;
 }
 
 .glowlink:hover {
@@ -12247,7 +12247,7 @@ a {
 }
 .boite {
   width: 300px;
-  height: 300px; /* Image (200px) + texte max (80px) */
+  height: 350px; /* Image (200px) + texte max (80px) */
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -12374,4 +12374,7 @@ a {
   transition: opacity 0.4s ease-out;
 }
 
-/* ----------------------------------------------- *//*# sourceMappingURL=main.css.map */
+/* ----------------------------------------------- */
+.progress {
+  width: 200px;
+}/*# sourceMappingURL=main.css.map */

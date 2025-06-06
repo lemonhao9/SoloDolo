@@ -1,11 +1,14 @@
 $primary:#63C9FF;
 $secondary:#FF8FAB;
-$dark:#d1c060;
+$dark:#ffda05;
 $black:#2C2A3F;
 $btn-gradient:linear-gradient(to right,#FF8FAB, #FF6456);
 $gradient-primary: linear-gradient(to right,#63C9FF, #4B5EAA);
 $gradient-secondary: linear-gradient(to right,#FF8FAB, #FF6456);
 $font-family-sans-serif:"Inter", sans-serif !default;
 $font-family-serif:"Merriweather", serif !default;
+$progress-bar-bg: #FF8FAB;
 
+$transition-collapse:         height .35s ease;
+$transition-collapse-width:   width .35s ease;
 @import "../node_modules/bootstrap/scss/bootstrap";
