@@ -12312,7 +12312,7 @@ a {
 }
 
 .boite:hover .tex {
-  max-height: 1000px;
+  max-height: 1500px;
   max-width: none;
   padding: 10px;
 }

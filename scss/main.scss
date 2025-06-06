@@ -327,39 +327,38 @@ background-image: $gradient-primary;
   width: 100px;
 }
 
-    .image-wrapper {
-      display: flex;
-      justify-content: center;
-      flex-shrink: 0;
-      width: 100%;
-      height: 200px;
-      cursor: pointer;
-      margin: auto;
-    }
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 100%;
+  height: 200px;
+  cursor: pointer;
+  margin: auto;
+}
 
-    .image-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      display: block;
-      
-    }
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block; 
+}
 
-    .tex {
-      font-size: 20px;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s ease, padding 0.3s ease;
-      padding: 0 10px;
-      background-color: #4B5EAA;
-      border-radius: 10px;
-    }
+.tex {
+  font-size: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  padding: 0 10px;
+  background-color: #4B5EAA;
+  border-radius: 10px;
+}
 
-    .boite:hover .tex {
-      max-height: 1000px;
-      max-width: none;
-      padding: 10px;
-    }
+.boite:hover .tex {
+  max-height: 1500px;
+  max-width: none;
+  padding: 10px;
+}
 
     .gallery {
       display: flex;
