@@ -4916,7 +4916,7 @@ textarea.form-control-lg {
   --bs-progress-border-radius: var(--bs-border-radius);
   --bs-progress-box-shadow: var(--bs-box-shadow-inset);
   --bs-progress-bar-color: black;
-  --bs-progress-bar-bg: #FF8FAB;
+  --bs-progress-bar-bg: #63C9FF;
   --bs-progress-bar-transition: width 0.6s ease;
   display: flex;
   height: var(--bs-progress-height);
@@ -12286,8 +12286,8 @@ a {
   }
 }
 .boite {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -12295,7 +12295,14 @@ a {
 }
 
 .progress {
-  width: 100px;
+  width: 330px;
+  position: relative;
+}
+
+.desbar {
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 .image-wrapper {
@@ -12418,4 +12425,7 @@ a {
   transition: opacity 0.4s ease-out;
 }
 
-/* ----------------------------------------------- *//*# sourceMappingURL=main.css.map */
+/* ----------------------------------------------- */
+.card {
+  box-shadow: 0 10px 20px #63C9FF;
+}/*# sourceMappingURL=main.css.map */
