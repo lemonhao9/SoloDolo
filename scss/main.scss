@@ -19,6 +19,7 @@ body {
   height: 60px;
   background-image: linear-gradient(to right, #2C2A3F, #3C2F5C);
   transition: 0.5s;
+  z-index: 1000;
 }
 
 .navbar-brand {
@@ -82,7 +83,7 @@ a u:visited {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(99, 201, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-#highlight {
+.highlight {
   background-image: $gradient-secondary;
   -webkit-background-clip: text;
   background-clip: text;
@@ -133,10 +134,10 @@ a {
   width: 100%;
 }
 
-#start {
-  text-shadow: 0 0 10px #63C9FF, 0 0 20px #63C9FF, 0 0 30px #63C9FF;
-  animation: glow 1.5s ease-in-out infinite alternate;
-}
+// #start {
+//   text-shadow: 0 0 10px #63C9FF, 0 0 20px #63C9FF, 0 0 30px #63C9FF;
+//   animation: glow 1.5s ease-in-out infinite alternate;
+// }
 
 #looking {
   font-size: smaller;
@@ -483,5 +484,60 @@ a {
 
 /* ----------------------------------------------- */
 .card {
-  box-shadow: 0 10px 20px #63C9FF;
+box-shadow: 0px 0px 5px 5px #63C9FF;
+}
+
+.nice,
+.nice *,
+.nice::after,
+.nice::before {
+  border: 0;
+  box-sizing: border-box;
+}
+
+.nice {
+  --thickness: 0.3rem;
+  --roundness: 1.2rem;
+  --color: #eff6ff;
+  --opacity: 0.6;
+
+  -webkit-tap-highlight-color: transparent;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(100px);
+  appearance: none;
+  background: hsla(0, 0%, 75%, 0.1);
+  border: 2px solid #63C9FF;
+  border-radius: var(--roundness);
+  color: var(--color);
+  cursor: pointer;
+  display: block;
+  line-height: 1.5;
+  margin: 0.5em 0 0;
+  padding: 0.3rem 1rem;
+  position: relative;
+}
+
+.nice:hover {
+  // #0003298C
+  background: hsla(236, 100%, 8%, 0.548);
+  filter: brightness(1.2);
+  box-shadow: 0px 1px 42px 10px rgba(99,201,255,0.75);
+-webkit-box-shadow: 0px 1px 42px 10px rgba(99,201,255,0.75);
+-moz-box-shadow: 0px 1px 42px 10px rgba(99,201,255,0.75);
+}
+
+.nice:disabled {
+  cursor: default;
+}
+
+.nice:-moz-focusring {
+  outline: auto;
+}
+
+.bi-caret-down-fill, .bi-caret-up-fill {
+  transition: transform 0.3s ease;
+}
+
+.bi-caret-up-fill {
+  transform: rotate(180deg);
 }
