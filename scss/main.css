@@ -11974,45 +11974,12 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+/* Global stuff */
 html,
 body {
   background-color: #2C2A3F;
-  background-image: linear-gradient(to right, #2C2A3F, #3C2F5C);
+  background-image: linear-gradient(90deg, #2C2A3F 50%, #3C2F5C 100%);
   font-size: larger;
-}
-
-.navbar {
-  border-bottom: 1px solid #63C9FF;
-  border-radius: 5px;
-  box-shadow: 0 -5px 5px -5px #63C9FF, 0 5px 5px -5px #63C9FF, 0 0 5px #63C9FF;
-  position: fixed;
-  width: 100%;
-  height: 60px;
-  background-image: linear-gradient(to right, #2C2A3F, #3C2F5C);
-  transition: 0.5s;
-  z-index: 1000;
-}
-
-.navbar-brand {
-  color: #ffffff;
-  text-shadow: 0 0 30px #63C9FF, 0 0 30px #63C9FF, 0 0 30px #63C9FF;
-  animation: glow 1.5s ease-in-out infinite alternate;
-}
-
-#navbarNavDropdown {
-  background-image: linear-gradient(to right, #2C2A3F, #3C2F5C);
-  opacity: 75%;
-}
-
-.bigtitle {
-  font-weight: bold;
-  text-shadow: 0 0 30px #63C9FF, 0 0 30px #63C9FF, 0 0 30px #63C9FF;
-  animation: glow 1.3s ease-in-out infinite alternate;
-}
-
-.look {
-  -webkit-text-decoration: underline 0.8px;
-          text-decoration: underline 0.8px;
 }
 
 a u {
@@ -12031,10 +11998,115 @@ a u:visited {
   color: #d1c060;
 }
 
-.glowlink:hover {
+#moreabout,
+#mailmodal,
+#gotocv,
+#sendbtn {
+  background-image: linear-gradient(to right, #FF8FAB, #FF6456);
+  color: #ffffff;
+  box-shadow: 0 0 10px #FF8FAB, 0 0 10px #FF8FAB, 0 0 10px #FF8FAB;
+  animation: glowred 1.5s ease-in-out infinite alternate;
+}
+
+#moreabout:hover,
+#mailmodal:hover,
+#gotocv:hover,
+#sendbtn:hover {
+  background-image: linear-gradient(to right, #63C9FF, #4B5EAA);
+  color: #ffffff;
+  box-shadow: 0 0 20px #63C9FF, 0 0 20px #63C9FF, 0 0 20px #63C9FF;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+/* ----------------------------------------------- */
+/* Section du Loader */
+.loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lettre {
+  color: #4B5EAA;
+  font-size: 80px;
+  letter-spacing: 15px;
+  margin-bottom: 150px;
+  animation: neon 1.3s linear infinite;
+}
+
+/* + le keyframe neon plus bas */
+.lettre:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.lettre:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.lettre:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.lettre:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.lettre:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.lettre:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.lettre:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.lettre:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+.lettre:nth-child(9) {
+  animation-delay: 0.9s;
+}
+
+.lettre:nth-child(10) {
+  animation-delay: 1s;
+}
+
+.fondu-out {
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+/* ----------------------------------------------- */
+/* Section Navbar */
+.navbar {
+  border-bottom: 1px solid #63C9FF;
+  border-radius: 5px;
+  box-shadow: 0 -5px 5px -5px #63C9FF, 0 5px 5px -5px #63C9FF, 0 0 5px #63C9FF;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background-image: linear-gradient(90deg, #2C2A3F 50%, #3C2F5C 100%);
+  transition: 0.5s;
+  z-index: 1000;
+}
+
+.navbar-brand {
   color: #ffffff;
   text-shadow: 0 0 30px #63C9FF, 0 0 30px #63C9FF, 0 0 30px #63C9FF;
   animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+#navbarNavDropdown {
+  background-image: linear-gradient(90deg, #2C2A3F 50%, #3C2F5C 100%);
+  opacity: 75%;
 }
 
 .dropdown-menu {
@@ -12052,6 +12124,58 @@ a u:visited {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(99, 201, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+/* ----------------------------------------------- */
+/* home.html */
+.bigtitle {
+  font-weight: bold;
+  text-shadow: 0 0 30px #63C9FF, 0 0 30px #63C9FF, 0 0 30px #63C9FF;
+  animation: glow 1.3s ease-in-out infinite alternate;
+}
+
+.look {
+  -webkit-text-decoration: underline 0.8px;
+          text-decoration: underline 0.8px;
+}
+
+/* ----------------------------------------------- */
+/* Neon & Glow effects */
+.glowlink:hover {
+  color: #ffffff;
+  text-shadow: 0 0 30px #63C9FF, 0 0 30px #63C9FF, 0 0 30px #63C9FF;
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowred {
+  from {
+    text-shadow: 0 0 5px #FF8FAB, 0 0 10px #FF8FAB, 0 0 15px #FF8FAB;
+  }
+  to {
+    text-shadow: 0 0 10px #FF6456, 0 0 20px #FF6456, 0 0 30px #FF6456;
+  }
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #4B5EAA, 0 0 10px #4B5EAA, 0 0 15px #4B5EAA;
+  }
+  to {
+    text-shadow: 0 0 10px #63C9FF, 0 0 20px #63C9FF, 0 0 30px #63C9FF;
+  }
+}
+@keyframes neon {
+  0% {
+    color: #63C9FF;
+    text-shadow: 0 0 10px #63C9FF;
+  }
+  90% {
+    color: #4B5EAA;
+    text-shadow: none;
+  }
+  100% {
+    color: #63C9FF;
+    text-shadow: 0 0 10px #63C9FF;
+  }
+}
+/* ----------------------------------------------- */
 .highlight {
   background-image: linear-gradient(to right, #FF8FAB, #FF6456);
   -webkit-background-clip: text;
@@ -12088,6 +12212,7 @@ a {
   animation: glow 1.5s ease-in-out infinite alternate;
 }
 
+/* Section CV */
 #verytop {
   border-top: 1px solid #63C9FF;
   border-bottom: 1px solid #63C9FF;
@@ -12100,13 +12225,13 @@ a {
   width: 100%;
 }
 
-#looking {
-  font-size: smaller;
-}
-
 #tetopied {
   max-height: 500px;
   margin-right: 20px;
+}
+
+#looking {
+  font-size: smaller;
 }
 
 #goto {
@@ -12131,6 +12256,7 @@ a {
   flex-wrap: wrap;
 }
 
+/* Section Contact modal */
 .modal-content {
   background-color: #2C2A3F;
   background-image: linear-gradient(to right, #2C2A3F, #3C2F5C);
@@ -12143,30 +12269,11 @@ a {
   animation: glow 1.5s ease-in-out infinite alternate;
 }
 
-#moreabout,
-#mailmodal,
-#gotocv,
-#sendbtn {
-  background-image: linear-gradient(to right, #FF8FAB, #FF6456);
-  color: #ffffff;
-  box-shadow: 0 0 10px #FF8FAB, 0 0 10px #FF8FAB, 0 0 10px #FF8FAB;
-  animation: glowred 1.5s ease-in-out infinite alternate;
-}
-
-#moreabout:hover,
-#mailmodal:hover,
-#gotocv:hover,
-#sendbtn:hover {
-  background-image: linear-gradient(to right, #63C9FF, #4B5EAA);
-  color: #ffffff;
-  box-shadow: 0 0 20px #63C9FF, 0 0 20px #63C9FF, 0 0 20px #63C9FF;
-  animation: glow 1.5s ease-in-out infinite alternate;
-}
-
 .btn-close {
   background-color: #63C9FF;
 }
 
+/* ----------------------------------------------- */
 #sskills {
   border-top: 1px solid #63C9FF;
   border-bottom: 1px solid #63C9FF;
@@ -12265,22 +12372,6 @@ a {
   }
 }
 
-@keyframes glowred {
-  from {
-    text-shadow: 0 0 5px #FF8FAB, 0 0 10px #FF8FAB, 0 0 15px #FF8FAB;
-  }
-  to {
-    text-shadow: 0 0 10px #FF6456, 0 0 20px #FF6456, 0 0 30px #FF6456;
-  }
-}
-@keyframes glow {
-  from {
-    text-shadow: 0 0 5px #4B5EAA, 0 0 10px #4B5EAA, 0 0 15px #4B5EAA;
-  }
-  to {
-    text-shadow: 0 0 10px #63C9FF, 0 0 20px #63C9FF, 0 0 30px #63C9FF;
-  }
-}
 .boite {
   width: 350px;
   height: 350px;
@@ -12325,7 +12416,7 @@ a {
   overflow: hidden;
   transition: max-height 0.5s ease, padding 0.3s ease;
   padding: 0 10px;
-  background-color: #4B5EAA;
+  background-color: hsla(236, 100%, 8%, 0.548);
   border-radius: 10px;
 }
 
@@ -12333,6 +12424,8 @@ a {
   max-height: 1500px;
   max-width: none;
   padding: 10px;
+  box-shadow: inset 0 0 15px #63C9FF;
+  animation: glow 1.5s ease-in-out infinite alternate;
 }
 
 .gallery {
@@ -12343,85 +12436,7 @@ a {
   max-width: 80vw;
 }
 
-/* Section du Loader */
-.loader {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.lettre {
-  color: #4B5EAA;
-  font-size: 80px;
-  letter-spacing: 15px;
-  margin-bottom: 150px;
-  animation: neon 1.3s linear infinite;
-}
-
-@keyframes neon {
-  0% {
-    color: #63C9FF;
-    text-shadow: 0 0 10px #63C9FF;
-  }
-  90% {
-    color: #4B5EAA;
-    text-shadow: none;
-  }
-  100% {
-    color: #63C9FF;
-    text-shadow: 0 0 10px #63C9FF;
-  }
-}
-.lettre:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.lettre:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.lettre:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.lettre:nth-child(4) {
-  animation-delay: 0.4s;
-}
-
-.lettre:nth-child(5) {
-  animation-delay: 0.5s;
-}
-
-.lettre:nth-child(6) {
-  animation-delay: 0.6s;
-}
-
-.lettre:nth-child(7) {
-  animation-delay: 0.7s;
-}
-
-.lettre:nth-child(8) {
-  animation-delay: 0.8s;
-}
-
-.lettre:nth-child(9) {
-  animation-delay: 0.9s;
-}
-
-.lettre:nth-child(10) {
-  animation-delay: 1s;
-}
-
-.fondu-out {
-  opacity: 0;
-  transition: opacity 0.4s ease-out;
-}
-
-/* ----------------------------------------------- */
+/* Section collapsible */
 .card {
   box-shadow: 0px 0px 5px 5px #63C9FF;
 }
@@ -12473,10 +12488,14 @@ a {
   outline: auto;
 }
 
-.bi-caret-down-fill, .bi-caret-up-fill {
+.bi-caret-down-fill,
+.bi-caret-up-fill {
   transition: transform 0.3s ease;
 }
 
 .bi-caret-up-fill {
   transform: rotate(180deg);
-}/*# sourceMappingURL=main.css.map */
+}
+
+/* ----------------------------------------------- */
+/* ----------------------------------------------- *//*# sourceMappingURL=main.css.map */
